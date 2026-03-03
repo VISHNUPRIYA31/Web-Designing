@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+</head>
+<body>
+
+<h1>Job Application Form</h1>
+
+<form action="" method="post">
+
+        <label for="fullname"><strong>Full Name:</strong></label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        <br><br>
+
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label><strong>Gender:</strong></label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <label><strong>Skills:</strong></label>
+        <input type="checkbox" id="communication" name="skills" value="communication">
+        <label for="communication">Communication</label>
+
+        <input type="checkbox" id="teamwork" name="skills" value="teamwork">
+        <label for="teamwork">Teamwork</label>
+
+        <input type="checkbox" id="programming" name="skills" value="programming">
+        <label for="programming">Programming</label>
+        <br><br>
+
+        <label for="position"><strong>Position Applying For:</strong></label>
+        <select id="position" name="position">
+            <optgroup label="Technical">
+                <option value="developer">Software Developer</option>
+                <option value="tester">Software Tester</option>
+            </optgroup>
+            <optgroup label="Non-Technical">
+                <option value="hr">HR Executive</option>
+                <option value="manager">Project Manager</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <label for="coverletter"><strong>Cover Letter:</strong></label><br>
+        <textarea id="coverletter" name="coverletter" rows="4" cols="40"></textarea>
+        <br><br>
+
+        <button type="submit">Apply</button>
+        <button type="reset">Clear</button>
+
+</form>
+</body>
+</html>
