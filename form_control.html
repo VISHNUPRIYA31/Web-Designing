@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> HTML Form Controls </title>
+</head>
+<body>
+
+<h2>Comprehensive Form Controls </h2>
+
+<form action="#" method="post">
+
+    <!-- Text Input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <!-- Password Input -->
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd"><br><br>
+
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+    <!-- Date Input -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label for="dob">Time Week & Month:</label>
+    <input type="time" id="dob" name="dob"><br><br>
+    <input type="week" id="dob" name="dob"><br><br>
+    <input type="month" id="dob" name="dob"><br><br>
+
+
+    <!-- Color Picker -->
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor"><br><br>
+
+    <!-- Range Slider -->
+    <label for="scale">Scale (1-10):</label>
+    <input type="range" id="scale" name="scale" min="1" max="10"><br><br>
+
+    <!-- Radio Buttons -->
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Checkboxes -->
+    <p>Hobbies:</p>
+    <input type="checkbox" id="reading" name="hobby" value="Reading">
+    <label for="reading">Reading</label><br>
+    <input type="checkbox" id="sports" name="hobby" value="Sports">
+    <label for="sports">Sports</label><br><br>
+
+    <!-- Dropdown (Select) -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- File Upload -->
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume"><br><br>
+
+    <!-- Textarea -->
+    <label for="notes">Additional Notes:</label><br>
+    <textarea id="notes" name="notes" rows="4" cols="40"></textarea><br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+
+    <!-- Reset Button -->
+    <input type="reset" value="Clear">
+
+    <p>This is page 10</p>
+      <input type = "hidden" name = "pagename" value = "10" />
+      <input type = "submit" name = "submit" value = "Submit" />
+      <input type = "reset" name = "reset" value = "Reset" />
+
+
+</form>
+
+</body>
+</html>
