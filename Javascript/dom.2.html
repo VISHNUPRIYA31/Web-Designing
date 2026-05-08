@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <div>
+        <h2>Student Registration</h2>
+
+        <label>Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <br><br>
+
+        <label>Department</label>
+        <select id="department">
+            <option value="">Select Department</option>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="ECE">Electronics and Communication</option>
+            <option value="EEE">Electrical and Electronics</option>
+            <option value="MECH">Mechanical Engineering</option>
+        </select>
+
+        <br><br>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <br><br>
+
+        <label>Contact Number</label>
+        <input type="text" id="phone" placeholder="Enter your contact number">
+
+        <br><br>
+
+        <button onclick="registerStudent()">Register</button>
+
+        <p id="errorMsg"></p>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function registerStudent() {
+            let name = document.getElementById("studentName").value;
+            let department = document.getElementById("department").value;
+            let email = document.getElementById("email").value;
+
+           
+            let error = document.getElementById("errorMsg");
+            let resultBox = document.querySelector("#result");
+
+            if (name === "" || department === "" || email === "") {
+                error.innerHTML = "Please fill all the fields.";
+            } else {
+                error.innerHTML = "";
+
+                resultBox.innerHTML =
+                    "<b>Registration Successful!</b><br>" +
+                    "Name: " + name + "<br>" +
+                    "Department: " + department + "<br>" +
+                    "Email: " + email;
+            }
+        }
+    </script>
+
+</body>
+</html>

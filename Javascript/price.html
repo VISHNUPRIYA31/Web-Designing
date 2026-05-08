@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stationery Shop Bill Calculator</title>
+</head>
+<body>
+
+    <h1>Stationery Shop Bill Calculator</h1>
+
+    <label>Enter Notebook Price:</label>
+    <input type="number" id="price"><br><br>
+
+    <label>Enter Quantity:</label>
+    <input type="number" id="quantity"><br><br>
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateTotal() {
+            let price = document.getElementById("price").value;
+            let quantity = document.getElementById("quantity").value;
+
+            let total = price * quantity;
+
+            document.getElementById("result").innerHTML =
+                "Total Amount = " + total;
+        }
+    </script>
+
+</body>
+</html>

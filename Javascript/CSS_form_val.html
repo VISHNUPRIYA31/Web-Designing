@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Constraint Validation CSS Pseudo Selectors</title>
+
+    <style>
+        input {
+            padding: 8px;
+            margin: 8px;
+            width: 250px;
+        }
+
+        input:required {
+            border: 2px solid orange;
+        }
+
+        input:optional {
+            border: 2px solid gray;
+        }
+
+        input:valid {
+            background-color: lightgreen;
+        }
+
+        input:invalid {
+            background-color: lightpink;
+        }
+
+        input:disabled {
+            background-color: lightgray;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <label>Student Name:</label><br>
+        <input type="text" required>
+        <br>
+
+        <label>Email:</label><br>
+        <input type="email" required>
+        <br>
+
+        <label>Age:</label><br>
+        <input type="number" min="17" max="25" required>
+        <br>
+
+        <label>Phone Number:</label><br>
+        <input type="text" pattern="[0-9]{10}" required>
+        <br>
+
+        <label>Hobby:</label><br>
+        <input type="text">
+        <br>
+
+        <label>Department:</label><br>
+        <input type="text" value="CSE" disabled>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

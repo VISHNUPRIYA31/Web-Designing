@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<h2>Number Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="num">
+<button onclick="validateNumber()">Submit</button>
+
+<p id="result"></p>
+<script>
+function validateNumber() {
+    let x = document.getElementById("num").value;
+
+    if (x == "") {
+        document.getElementById("result").innerHTML = "Number field cannot be empty.";
+    }
+    else if (isNaN(x)) {
+        document.getElementById("result").innerHTML = "Please enter only numbers.";
+    }
+    else if (x < 1 || x > 10) {
+        document.getElementById("result").innerHTML = "Number must be between 1 and 10.";
+    }
+    else {
+        document.getElementById("result").innerHTML = "Valid input.";
+    }
+}
+</script>
+</body>
+</html>

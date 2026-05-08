@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+    <h1 id ="vote"> Eligibility: </h1>
+    <script>
+        let age = -5;
+        let re = document.getElementById("vote");
+        if (age >= 18)
+        {
+            re.innerHTML += "Eligible to Vote";
+        }
+        else if (age > 0 && age <18 ) 
+        {
+            re.innerHTML +=  "Not Eligible to Vote";
+        }
+        else
+        {
+            re.innerHTML += "Invalied Input";
+        }
+    </script>
+</body>
+</html>

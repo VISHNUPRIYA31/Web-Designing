@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef3f8;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            background-color: white;
+            padding: 25px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1f4e79;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 18px;
+            background-color: #1f4e79;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #163a5c;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #dff0d8;
+            border-left: 5px solid green;
+            display: none;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+
+        <label>Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <label>Department</label>
+        <select id="department">
+            <option value="">Select Department</option>
+            <option value="CSE">Computer Science Engineering</option>
+            <option value="ECE">Electronics and Communication</option>
+            <option value="EEE">Electrical and Electronics</option>
+            <option value="MECH">Mechanical Engineering</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <button onclick="registerStudent()">Register</button>
+
+        <p class="error" id="errorMsg"></p>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function registerStudent() {
+            let name = document.getElementById("studentName").value;
+            let department = document.getElementById("department").value;
+            let email = document.getElementById("email").value;
+
+            let error = document.getElementById("errorMsg");
+            let resultBox = document.querySelector("#result");
+
+            if (name === "" || department === "" || email === "") {
+                error.innerHTML = "Please fill all the fields.";
+                resultBox.style.display = "none";
+            } else {
+                error.innerHTML = "";
+
+                resultBox.style.display = "block";
+                resultBox.innerHTML =
+                    "<b>Registration Successful!</b><br>" +
+                    "Name: " + name + "<br>" +
+                    "Department: " + department + "<br>" +
+                    "Email: " + email;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body onload="pageLoaded()">
+
+<h2>Student Registration Form</h2>
+
+<p id="loadMsg"></p>
+
+<form id="studentForm">
+    <label>Student Name:</label>
+    <input type="text" id="studentName" oninput="showTyping()">
+
+    <br><br>
+
+    <label>Department:</label>
+    <select id="department" onchange="showDepartment()">
+        <option value="">Select Department</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+    </select>
+
+    <br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<p id="typingMsg"></p>
+<p id="deptMsg"></p>
+<p id="result"></p>
+
+<script>
+function pageLoaded() {
+    document.getElementById("loadMsg").innerHTML = "Page loaded successfully. Please fill the form.";
+}
+
+function showTyping() {
+    let name = document.getElementById("studentName").value;
+    document.getElementById("typingMsg").innerHTML = "Typing: " + name;
+}
+
+function showDepartment() {
+    let department = document.getElementById("department").value;
+    document.getElementById("deptMsg").innerHTML = "Selected Department: " + department;
+}
+
+document.getElementById("studentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("studentName").value;
+    let department = document.getElementById("department").value;
+
+    if (name == "" || department == "") {
+        document.getElementById("result").innerHTML = "Please fill all the fields.";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Registration Successful! Welcome " + name + " from " + department;
+    }
+});
+</script>
+
+</body>
+</html>

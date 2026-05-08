@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>Event Registration Form</title>
+</head>
+
+<body>
+
+    <h2>Technical Symposium Registration Form</h2>
+
+    <form name="eventForm" onsubmit="return validateForm()">
+
+        <label>Student Name:</label>
+        <input type="text" name="studentName">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" name="email">
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone">
+        <br><br>
+
+        <label>Department:</label>
+        <select name="department">
+            <option value="">Select Department</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+        </select>
+        <br><br>
+
+        <label>Year:</label>
+        <select name="year">
+            <option value="">Select Year</option>
+            <option value="I Year">I Year</option>
+            <option value="II Year">II Year</option>
+            <option value="III Year">III Year</option>
+            <option value="IV Year">IV Year</option>
+        </select>
+        <br><br>
+
+        <label>Number of Events Participating:</label>
+        <input type="text" name="eventCount">
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function validateForm() {
+            let name = document.forms["eventForm"]["studentName"].value;
+            let email = document.forms["eventForm"]["email"].value;
+            let phone = document.forms["eventForm"]["phone"].value;
+            let department = document.forms["eventForm"]["department"].value;
+            let year = document.forms["eventForm"]["year"].value;
+            let eventCount = document.forms["eventForm"]["eventCount"].value;
+
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let phonePattern = /^[0-9]{10}$/;
+
+            if (name == "") {
+                alert("Student name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            if (phone == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must contain exactly 10 digits");
+                return false;
+            }
+
+            if (department == "") {
+                alert("Please select your department");
+                return false;
+            }
+
+            if (year == "") {
+                alert("Please select your year");
+                return false;
+            }
+
+            if (eventCount == "") {
+                alert("Please enter number of events");
+                return false;
+            }
+
+            if (isNaN(eventCount)) {
+                alert("Number of events must be a number");
+                return false;
+            }
+
+            if (eventCount < 1 || eventCount > 5) {
+                alert("You can participate in minimum 1 and maximum 5 events only");
+                return false;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Registration Successful! Welcome " + name + 
+                " from " + department + ", " + year + ".";
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

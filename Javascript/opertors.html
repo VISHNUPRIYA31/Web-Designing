@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Operators Example</title>
+</head>
+<body>
+
+<h2>Basic JavaScript Operators</h2>
+
+<p id="output"></p>
+
+<script>
+let a = 10;
+let b = 5;
+
+// Arithmetic
+let sum = a + b;
+let difference = a - b;
+let product = a * b;
+let division = a / b;
+
+// Comparison
+let isEqual = (a == b);
+let isGreater = (a > b);
+
+// Logical
+let logicalAnd = (a > 5 && b < 10);
+let logicalOr = (a < 5 || b < 10);
+
+// Assignment
+let x = 10;
+x += 5;
+
+// Display Output
+document.getElementById("output").innerHTML =
+"Arithmetic:<br>" +
+"a + b = " + sum + "<br>" +
+"a - b = " + difference + "<br>" +
+"a * b = " + product + "<br>" +
+"a / b = " + division + "<br><br>" +
+
+"Comparison:<br>" +
+"a == b : " + isEqual + "<br>" +
+"a > b : " + isGreater + "<br><br>" +
+
+"Logical:<br>" +
+"(a > 5 && b < 10) : " + logicalAnd + "<br>" +
+"(a < 5 || b < 10) : " + logicalOr + "<br><br>" +
+
+"Assignment:<br>" +
+"x after x += 5 : " + x;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>HTML Form Validation Example</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form>
+        <label>Student Name:</label>
+        <input type="text" name="studentName" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="17" max="25" required>
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone" pattern="[0-9]{10}" required>
+        <br><br>
+
+        <label>Department:</label>
+        <input type="text" name="department" value="CSE" disabled>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
